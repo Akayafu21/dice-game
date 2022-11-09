@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;800&display=swap');
+
+:root{
+    --lightgreen :rgb(190, 233, 190);
+    --melongreen :rgb(129, 218, 129);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+    /* outline: 1px solid salmon; */
+}
+
+
+
+body {
+    background-color:var(--lightgreen);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    width: 75rem;
+    height: 40rem;
+    text-align: center;
+}
+
+.up {
+    margin-bottom: 2rem;
+}
+
+.up h1 {
+    font-size: 8rem;
+    line-height: 5rem;
+    text-shadow: 5px 5px 0 white;
+    color:var(--melongreen);
+    transition: .4s all ease-in-out;
+}
+
+.mid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-bottom: 2rem;
+}
+
+.mid h3 {
+    z-index: 1030;
+    color: aliceblue;
+    font-size: 2rem;
+    text-shadow: 2px 2px 0 var(--melongreen);
+}
+
+.down {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    height: 70%;
+}
+
+.dice {
+    border-radius: 25px;
+    margin:auto;
+    /* background-image: url(/img/die.jpeg); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 20rem;
+    height: 20rem;
+    background-color: var(--melongreen);
+    transition: .4s all ease-in-out;
+}
+
+.play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10rem;
+    height: 3rem;
+    padding: .5rem 3rem;
+    translate: -50% -50%;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    color: aliceblue;
+    background-color: var(--melongreen);
+    font-weight: 600;
+    letter-spacing: .2rem;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+}
+
+.made {
+    position: fixed;
+    bottom: 2rem;
+    color: var(--melongreen);
+    font-weight: 400;
+}
+
+.win {
+    box-shadow: 0 0 5px 40px rgba(240, 248, 255,.5);
+}
+
+
+
+/* for dice */
+.one {
+    background-image: url(/img/one.png);
+}
+
+.two {
+    background-image: url(/img/two.png);
+}
+
+.three {
+    background-image: url(/img/three.png);
+}
+
+.four {
+    background-image: url(/img/four.png);
+}
+
+.five {
+    background-image: url(/img/five.png);
+}
+
+.six {
+    background-image: url(/img/six.png);
+}
+
+/* Hover */
+
+.play:hover {
+    box-shadow: 8px 8px 0 aliceblue;
+}
+
+@media only screen and (max-width:960px) {
+
+    main{
+        width: 100%;
+        height: auto;
+
+    }
+
+    .up h1 {
+        font-size: 4rem;
+    }
+
+    .mid{
+       width: 100%;
+       height: auto;
+    }
+
+    .down{
+        justify-content: center;
+        width: 100%;
+        scale: 50%;
+        height: auto;
+    }
+    .dice {
+        scale: 75%;
+        margin: 0;
+    }
+
+    .play {
+        color: var(--melongreen);
+        background-color: aliceblue;
+        /* box-shadow: var(--melongreen); */
+    }
+
+    .play:hover{
+        box-shadow: 5px 5px 0 var(--melongreen);
+    }
+}
